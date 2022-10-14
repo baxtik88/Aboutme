@@ -59,6 +59,7 @@ header {
     height: 850px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .banner__wrap {
@@ -70,19 +71,12 @@ header {
     gap: 151px;
 }
 
-@media screen and (max-width:702px) {
-    .banner__wrap {
-        flex-direction: column;
-        text-align: center;
-        padding: 0 15px;
-    }
-}
-
 .banner__h {
     font-family: 'Inter-Bold', sans-serif;
     font-size: 40px;
     font-weight: 700;
     line-height: 48px;
+    text-shadow: 0 0 2px white;
 }
 
 
@@ -245,21 +239,7 @@ header {
     margin-top: 34px;
 }
 
-@media screen and (max-width:768px) {
-    .header__wrap {
-        flex-direction: column;
-        gap: 14px;
-    }
 
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 10px;
-        margin-top: 5px;
-    }
-}
 
 
 @media screen and (max-width:1151px) {
@@ -269,13 +249,40 @@ header {
         justify-content: center;
         align-items: center;
     }
+    
+    @media screen and (max-width:768px) {
+        .header__wrap {
+            flex-direction: column;
+            gap: 14px;
+        }
+    
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        
+    }
+    @media screen and (max-width:702px) {
+        .banner__wrap {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
 
     @media screen and (max-width:520px) {
+        .banner__h {
+            font-size: 25px;
+        }
         .about__wrap {
             flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
         }
+       
 
         .about__h {
             font-size: 32px;
@@ -288,9 +295,7 @@ header {
             text-align: center;
             margin-bottom: 20px;
         }
-        .desc__p {
-            font-size: 16px;
-        }
+       
         .about__desc {
             display: flex;
             justify-content: center;
